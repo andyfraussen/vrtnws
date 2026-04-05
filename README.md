@@ -2,6 +2,8 @@
 
 VRT NWS terminal reader. Browse the latest news and sports from [vrtnws.be](https://www.vrt.be/vrtnws/nl/) and [sporza.be](https://sporza.be) without leaving your terminal.
 
+![screenshot](screenshot.png)
+
 ## Install
 
 ```bash
