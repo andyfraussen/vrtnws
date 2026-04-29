@@ -1,6 +1,6 @@
 {
   "name": "vrtnws",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "VRT NWS terminal reader",
   "type": "module",
   "bin": {

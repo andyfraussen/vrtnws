@@ -1,25 +1,55 @@
 # vrtnws
 
-VRT NWS terminal reader. Browse the latest news and sports from [vrtnws.be](https://www.vrt.be/vrtnws/nl/) and [sporza.be](https://sporza.be) without leaving your terminal.
+Read VRT NWS and Sporza from your terminal.
 
-![screenshot](screenshot.png)
+![vrtnws screenshot](screenshot.png)
 
 ## Install
+
+Install the CLI globally from npm.
 
 ```bash
 npm install --global vrtnws
 ```
 
-## Usage
+Run it.
 
 ```bash
 vrtnws
 ```
 
+## What It Does
+
+`vrtnws` opens a terminal news reader with two sections.
+
+1. Nieuws, from VRT NWS
+2. Sport, from Sporza
+
+Feeds refresh automatically every 5 minutes. You can also refresh the current section manually.
+
+## Controls
+
+1. `j` or `↓`: Move down
+2. `k` or `↑`: Move up
+3. `Enter` or `o`: Open the selected article
+4. `o`: Open the full article in your browser from the article view
+5. `Tab`: Switch between Nieuws and Sport
+6. `r`: Refresh the current feed
+7. `h`: Show help
+8. `ESC` or `b`: Go back to the list
+9. `q`: Quit
+
 ## Development
+
+Install dependencies.
 
 ```bash
 npm install
+```
+
+Run the app from source.
+
+```bash
 npm run dev
 ```
 
@@ -29,73 +59,25 @@ Build the CLI.
 npm run build
 ```
 
-Run local checks.
+Run checks.
 
 ```bash
 npm run typecheck
 npm pack --dry-run
 ```
 
-Test the command from this checkout.
+Test the global command from this checkout.
 
 ```bash
 npm link
 vrtnws
 ```
 
-Remove the linked command when you are done testing.
+Remove the linked command when you are done.
 
 ```bash
 npm unlink --global vrtnws
 ```
-
-## Publishing
-
-The package is published as `vrtnws` on npm.
-
-1. Log in to npm.
-
-```bash
-npm login
-```
-
-2. Check the package contents.
-
-```bash
-npm run typecheck
-npm pack --dry-run
-```
-
-3. Publish a new version.
-
-```bash
-npm publish --access public
-```
-
-4. Install the published package.
-
-```bash
-npm install --global vrtnws
-vrtnws
-```
-
-## Keys
-
-1. `↑` / `↓`: Navigate articles
-2. `j` / `k`: Navigate articles or scroll article text
-3. `Enter` / `o`: Open article
-4. `ESC` / `b`: Back to list
-5. `o`: Open full article in browser from the article detail
-6. `Tab`: Switch between Nieuws and Sport
-7. `r`: Refresh the current feed
-8. `h`: Help
-9. `q`: Quit
-
-## Sections
-
-Nieuws (VRT NWS), Sport (Sporza).
-
-Feeds refresh automatically every 5 minutes.
 
 ## Requirements
 
