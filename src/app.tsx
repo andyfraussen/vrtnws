@@ -343,6 +343,7 @@ function ListScreen({
 	const visibleArticles = feed.articles.slice(listOffset, listOffset + visibleCount);
 	const hasArticlesAbove = listOffset > 0;
 	const hasArticlesBelow = listOffset + visibleCount < feed.articles.length;
+	const articlesBelow = Math.max(0, feed.articles.length - listOffset - visibleCount);
 
 	return (
 		<Box flexDirection="column" paddingX={2}>
@@ -358,7 +359,7 @@ function ListScreen({
 
 			{!feed.loading && feed.articles.length > 0 ? (
 				<>
-					{hasArticlesAbove ? <Text color={COLORS.muted}>↑ {listOffset} artikels boven</Text> : null}
+					<Text color={hasArticlesAbove ? COLORS.muted : COLORS.disabled}>↑ {listOffset} artikels boven</Text>
 					{visibleArticles.map((article, index) => {
 							const absoluteIndex = listOffset + index;
 
@@ -370,9 +371,7 @@ function ListScreen({
 								/>
 							);
 						})}
-					{hasArticlesBelow ? (
-						<Text color={COLORS.muted}>↓ {feed.articles.length - listOffset - visibleCount} artikels verder</Text>
-					) : null}
+					<Text color={hasArticlesBelow ? COLORS.muted : COLORS.disabled}>↓ {articlesBelow} artikels verder</Text>
 				</>
 			) : null}
 		</Box>
@@ -470,7 +469,7 @@ function DetailScreen({
 				<Text color={COLORS.soft}>Volledige tekst niet beschikbaar. Druk O om in browser te openen.</Text>
 			) : null}
 
-			{hasBodyAbove ? <Text color={COLORS.muted}>↑ meer tekst boven</Text> : null}
+			<Text color={hasBodyAbove ? COLORS.muted : COLORS.disabled}>↑ begin artikel</Text>
 
 			{visibleBody.map((line, index) => {
 				if (line.kind === 'blank') {
@@ -488,7 +487,7 @@ function DetailScreen({
 				return <Text key={`${safeOffset}-${index}`}>{line.text}</Text>;
 			})}
 
-			{hasBodyBelow ? <Text color={COLORS.muted}>↓ meer tekst onder</Text> : null}
+			<Text color={hasBodyBelow ? COLORS.muted : COLORS.disabled}>↓ einde artikel</Text>
 		</Box>
 	);
 }

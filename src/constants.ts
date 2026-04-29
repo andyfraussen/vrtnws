@@ -11,5 +11,6 @@ export const COLORS = {
 	purpleDark: '#5E478C',
 	border: '#6B7280',
 	muted: '#64748B',
+	disabled: '#A8B0C0',
 	soft: '#475569',
 };
