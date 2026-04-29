@@ -39,46 +39,6 @@ Feeds refresh automatically every 5 minutes. You can also refresh the current se
 8. `ESC` or `b`: Go back to the list
 9. `q`: Quit
 
-## Development
-
-Install dependencies.
-
-```bash
-npm install
-```
-
-Run the app from source.
-
-```bash
-npm run dev
-```
-
-Build the CLI.
-
-```bash
-npm run build
-```
-
-Run checks.
-
-```bash
-npm run typecheck
-npm pack --dry-run
-```
-
-Test the global command from this checkout.
-
-```bash
-npm link
-vrtnws
-```
-
-Remove the linked command when you are done.
-
-```bash
-npm unlink --global vrtnws
-```
-
 ## Requirements
 
 Node.js 22 or newer.
