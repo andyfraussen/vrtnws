@@ -1,0 +1,40 @@
+{
+  "name": "vrtnws",
+  "version": "0.1.0",
+  "description": "VRT NWS terminal reader",
+  "type": "module",
+  "bin": {
+    "vrtnws": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "screenshot.png"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "dev": "tsx src/cli.tsx",
+    "prepare": "npm run build",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "figlet": "^1.8.0",
+    "ink": "^6.5.1",
+    "open": "^10.2.0",
+    "react": "^19.2.0",
+    "rss-parser": "^3.13.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^25.0.0",
+    "@types/react": "^19.2.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
