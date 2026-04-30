@@ -1,5 +1,9 @@
 # vrtnws
 
+[![npm version](https://img.shields.io/npm/v/vrtnws)](https://www.npmjs.com/package/vrtnws)
+[![npm downloads](https://img.shields.io/npm/dm/vrtnws)](https://www.npmjs.com/package/vrtnws)
+[![license](https://img.shields.io/npm/l/vrtnws)](https://github.com/andyfraussen/vrtnws/blob/main/LICENSE)
+
 Read VRT NWS and Sporza from your terminal.
 
 ![vrtnws screenshot](screenshot.png)

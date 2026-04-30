@@ -2,12 +2,22 @@
   "name": "vrtnws",
   "version": "0.1.1",
   "description": "VRT NWS terminal reader",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyfraussen/vrtnws.git"
+  },
+  "homepage": "https://github.com/andyfraussen/vrtnws#readme",
+  "bugs": {
+    "url": "https://github.com/andyfraussen/vrtnws/issues"
+  },
   "bin": {
     "vrtnws": "dist/cli.js"
   },
   "files": [
     "dist",
+    "LICENSE",
     "README.md",
     "screenshot.png"
   ],
